@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google-cloud/recaptcha-enterprise": "^5.9.0",
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "express-validator": "^7.1.0",
+    "helmet": "^7.1.0",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
+    "nodemailer": "^6.9.14",
+    "pm2": "^5.4.1",
+    "react-google-recaptcha": "^3.1.0",
+    "winston": "^3.13.0"
+  },
+  "proxy": "http://localhost:4000"
+}
