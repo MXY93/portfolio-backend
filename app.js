@@ -1,7 +1,6 @@
 const express = require('express');
 const helmet = require('helmet');
 const csrf = require('csurf');
-const path = require('path');
 const cors = require('cors');
 const logger = require('./logger');
 const connectDB = require('./config/db');
@@ -39,12 +38,6 @@ app.use((req, res, next) => {
 
 app.use('/api', contactRoutes);
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 app.get('/', (req, res) => {
     res.send('Hello World! Comment ça va ?');
 });
@@ -72,6 +65,7 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
 
 
 
