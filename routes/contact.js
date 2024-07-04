@@ -1,30 +1,3 @@
-const { RecaptchaEnterpriseServiceClient } = require('@google-cloud/recaptcha-enterprise');
-const recaptchaClient = new RecaptchaEnterpriseServiceClient();
-
-const projectPath = recaptchaClient.projectPath('maxime-videau-portfolio');
-
-async function validateRecaptcha(recaptchaToken) {
-    const request = {
-        assessment: {
-            event: {
-                token: recaptchaToken,
-                siteKey: process.env.RECAPTCHA_SITE_KEY,
-                expectedAction: 'submit',
-            },
-        },
-        parent: projectPath,
-    };
-
-    const [response] = await recaptchaClient.createAssessment(request);
-    const { riskAnalysis, tokenProperties } = response;
-
-    if (tokenProperties && tokenProperties.valid && riskAnalysis.score >= 0.5) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
 const express = require('express');
 const { body, validationResult } = require('express-validator');
 const logger = require('../logger');
