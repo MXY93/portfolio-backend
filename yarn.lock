@@ -16,10 +16,10 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
-"@google-cloud/recaptcha-enterprise@^5.9.0":
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/@google-cloud/recaptcha-enterprise/-/recaptcha-enterprise-5.9.0.tgz#6e2023f0fc70c0b6889f461e78cb26c3a574e432"
-  integrity sha512-pc0t1CzJ/Hrb+ooqHcBOfAY0Kvc2yjEErBe06WHdW+e8svTPhkS1CCU98BFNoxNcb1dhi7q4o7ZQ7XSh08eqDA==
+"@google-cloud/recaptcha-enterprise@^5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@google-cloud/recaptcha-enterprise/-/recaptcha-enterprise-5.10.0.tgz#03392d3fdd90c65e00763782af178db88a4c753f"
+  integrity sha512-e3YdyfnxKnibWL+AvA36dPP/f9SBQnil1q9w9R7gcwO1Iogo74Vc0oDtRElNl6nWbkbDq57BdwM6VOg+aZZn7Q==
   dependencies:
     google-gax "^4.0.3"
 
