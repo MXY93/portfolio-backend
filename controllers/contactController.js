@@ -15,7 +15,12 @@ const transporter = nodemailer.createTransport({
 });
 
 const validateRecaptcha = async (recaptchaToken) => {
-  const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecretKey}&response=${recaptchaToken}`);
+  const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify`, null, {
+    params: {
+      secret: recaptchaSecretKey,
+      response: recaptchaToken
+    }
+  });
   return response.data.success;
 };
 
