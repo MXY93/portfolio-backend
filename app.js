@@ -17,7 +17,12 @@ app.use(express.json());
 app.use(helmet());
 
 const corsOptions = {
-    origin: ['http://localhost:3000', 'https://maxime-videau.com'],
+    origin: [
+        'https://maxime-videau.com', 
+        'https://www.maxime-videau.com', 
+        'https://portfolio-frontend-maxime-videaus-projects.vercel.app',
+        'https://www.portfolio-frontend-maxime-videaus-projects.vercel.app'
+    ],
     methods: 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
     allowedHeaders: 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization'
 };
