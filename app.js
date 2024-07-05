@@ -44,7 +44,7 @@ app.use((req, res, next) => {
 app.use('/api', contactRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hello World! Comment ça va ?');
+    res.send('Hello World! Comment ça va ? Bien');
 });
 
 // Handle CSRF errors
