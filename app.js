@@ -32,8 +32,13 @@ app.use('/api/', limiter);
 
 app.use(cookieParser());
 
-const csrfProtection = csrf({ cookie: true });
-app.use(csrfProtection);
+app.use((req, res, next) => {
+    if (req.path.startsWith('/api/')) {
+        return next();
+    } else {
+        csrf({ cookie: true })(req, res, next);
+    }
+});
 
 // Log all requests
 app.use((req, res, next) => {
